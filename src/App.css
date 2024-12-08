@@ -1,0 +1,290 @@
+/* Global Responsive Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Headings */
+  h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e4e8;
+  }
+  
+  .form input, 
+  .form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .form input:focus,
+  .form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  table thead {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  table th, 
+  table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e4e8;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f6f9;
+  }
+  
+  table tbody tr:hover {
+    background-color: #e6f2ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Action Buttons in Table */
+  table button {
+    background-color: #2ecc71;
+    font-size: 0.9em;
+    padding: 8px 12px;
+    margin: 0 5px;
+  }
+  
+  table button:last-child {
+    background-color: #e74c3c;
+  }
+  
+  /* Responsive Media Queries */
+  /* Small devices (landscape phones, 576px and up) */
+  @media screen and (max-width: 576px) {
+    .container {
+      padding: 15px;
+      margin: 0 5px;
+    }
+  
+    .form {
+      padding: 15px;
+    }
+  
+    .form input, 
+    .form select {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+    table, 
+    table thead, 
+    table tbody, 
+    table th, 
+    table td {
+      display: block;
+    }
+  
+    table thead {
+      display: none;
+    }
+  
+    table tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  
+    table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 12px;
+    }
+  
+    table td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #3498db;
+      margin-right: 10px;
+    }
+  
+    table td:last-child {
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+      max-width: 95%;
+      padding: 25px;
+    }
+  
+    .form input, 
+    .form select {
+      padding: 10px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    table th, 
+    table td {
+      padding: 12px;
+    }
+  }
+  
+  /* Large devices (desktops, 993px and up) */
+  @media screen and (min-width: 993px) {
+    .container {
+      max-width: 900px;
+    }
+  }
+  
+  /* Accessibility and Print Styles */
+  @media print {
+    body {
+      background-color: white;
+    }
+  
+    .container {
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+  
+    button {
+      display: none;
+    }
+  }
+  
+  /* Additional Accessibility Enhancements */
+  input:focus,
+  select:focus,
+  button:focus {
+    outline: 3px solid rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Error and Success Messages */
+  p[style*="color: red"] {
+    color: #e74c3c !important;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+  }
+  
+  p[style*="color: green"] {
+    color: #2ecc71 !important;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  /* Checkbox Styles with Improved Accessibility */
+  input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #3498db;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  input[type="checkbox"]:focus {
+    outline: 3px solid rgba(52, 152, 219, 0.5);
+  }
